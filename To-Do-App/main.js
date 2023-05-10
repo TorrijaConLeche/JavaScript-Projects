@@ -1,5 +1,3 @@
-// Formulario con un campo para agregar nuevas tareas
-// Cada tarea tendra un boton para marcar la tarea como completado y otro para eliminarla
 
 const button = document.getElementById("addtask")
 button.onclick = () => addTask()
@@ -10,6 +8,15 @@ function addTask() {
 
     // Collect input value (task)
     let task = document.getElementById("newtask").value
+
+    // Show / Hide error message
+    let erorrmsg = document.getElementById("errormsg");
+    if (task == "") {
+        erorrmsg.setAttribute("style", "display: block;")
+        return
+    } else {
+        erorrmsg.setAttribute("style", "display: none;")
+    }
 
     // Create div for each task
     let newTaskDiv = document.createElement("DIV")
@@ -29,13 +36,14 @@ function addTask() {
     // Delete task button
     newTaskDelete.onclick = function () { newTaskDelete.parentElement.remove() };
 
-    taskImg.setAttribute("src", "./To-Do-App/unchecked.png") // Default img is unchecked.png
+    taskImg.setAttribute("src", "/To-Do-App/content/unchecked.png") // Default img is unchecked.png
     newTaskDiv.setAttribute("style", "box-shadow: 6px 6px red") // Default Container color is red
+
     // Toggle checked and unchecked img and style
     taskImg.onclick = function () {
         let imgAtrib = taskImg.getAttribute("src")
-        let newAtrib = imgAtrib == "./To-Do-App/checked.png" ? "./To-Do-App/unchecked.png" : "./To-Do-App/checked.png"
-        let divStyle = imgAtrib == "./To-Do-App/checked.png" ? "box-shadow: 6px 6px red" : "box-shadow: 6px 6px lightgreen"
+        let newAtrib = imgAtrib == "/To-Do-App/content/checked.png" ? "/To-Do-App/content/unchecked.png" : "/To-Do-App/content/checked.png"
+        let divStyle = imgAtrib == "/To-Do-App/content/checked.png" ? "box-shadow: 6px 6px red" : "box-shadow: 6px 6px lightgreen"
         taskImg.setAttribute("src", newAtrib)
         newTaskDiv.setAttribute("style", divStyle)
     }
@@ -46,4 +54,18 @@ function addTask() {
     // Agregamos el elemento item al elemento contenedor
     tasklist.appendChild(newTaskDiv)
 
+    // Clear input field
+    document.getElementById("newtask").value = ""
 }
+
+// Delete all tasks
+const clearButton = document.getElementById("clearTasks")
+
+clearButton.onclick = () => clearTasks()
+
+function clearTasks() {
+    while (tasklist.firstChild) {
+        tasklist.removeChild(tasklist.firstChild);
+    }
+}
+

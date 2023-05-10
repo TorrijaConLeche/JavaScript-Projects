@@ -27,19 +27,20 @@ form {
 }
 
 main {
-    width: 40%;
+    width: 45%;
     align-items: center;
     justify-content: center;
     display: flex;
     gap: 10px;
+
 }
 
 #newtask {
     padding: 2%;
-    width: 55%;
+    width: 50%;
     border-radius: 8px;
     border: none;
-    box-shadow: 2px 3px rgb(212, 109, 36);
+    box-shadow: 2px 3px rgb(211, 114, 45);
     font-size: 15px;
     font-weight: 600;
 }
@@ -51,7 +52,7 @@ main {
 }
 
 #addtask {
-    width: 20%;
+    width: 14%;
     padding: 2%;
     border-radius: 8px;
     border: none;
@@ -71,7 +72,7 @@ main {
 
 #tasklist {
     width: 45%;
-    margin: 3%;
+    margin-top: 2%;
     gap: 10px;
 }
 
@@ -99,7 +100,7 @@ main {
 }
 
 #tasklist button {
-    width: 20%;
+    width: 18%;
     padding: 2%;
     border-radius: 8px;
     border: none;
@@ -110,9 +111,72 @@ main {
     font-weight: 600;
     box-shadow: 2px 3px rgb(167, 14, 14);
     transition: all .2s ease-in-out;
-
 }
 
 #tasklist button:hover {
     transform: scale(1.05);
+}
+
+#errormsg {
+    margin-top: 10px;
+    color: rgb(255, 86, 86);
+    font-weight: 500;
+}
+
+/* Header */
+#heading {
+    background-color: white;
+    height: 1%;
+    margin: 0;
+    width: 12%;
+    border-radius: 10px;
+    color: black;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    display: flex;
+    gap: 5%;
+    padding: 5px;
+    transition: all .2s ease-in-out;
+}
+
+#heading:hover {
+    transform: scale(1.05);
+}
+
+#heading img {
+    width: 15%;
+}
+
+#heading h3 {
+    margin: 0;
+}
+
+#heading a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Delete all tasks */
+#clearTasks {
+    width: 8%;
+
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    box-shadow: 2px 3px rgb(167, 14, 14);
+    transition: all .2s ease-in-out;
+}
+
+#clearImg {
+    width: 70%;
+    content: url("/To-Do-App/content/delete.png");
+    margin: 5px;
+
+}
+
+#clearImg:hover {
+    content: url("/To-Do-App/content/delete2.png");
 }

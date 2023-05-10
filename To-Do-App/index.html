@@ -3,29 +3,35 @@
 
 <head>
     <title>TO-DO App</title>
-    <!-- Idea from Andy Sterkowitz: https://www.youtube.com/watch?v=roumzWd4XJU  -->
+    <!-- Project from Andy Sterkowitz video: https://www.youtube.com/watch?v=roumzWd4XJU  -->
     <link rel="stylesheet" href="/To-Do-App/style.css">
-    <script type="module" src="./To-Do-App/main.js"></script>
+    <script type="module" src="/To-Do-App/main.js"></script>
+
 </head>
 
 <body>
     <div id="heading">
 
-        <img src="./To-Do-App/github.png">
-        <h3><a href="https://github.com/TorrijaConLeche/JavasCript-Projects/tree/main/To-Do-App">View Code</a></h3>
+        <img src="/To-Do-App/content/github.png">
+        <h3><a href="https://github.com/TorrijaConLeche/JavasCript-Projects/tree/main/To-Do-App">View on Github </a>
+        </h3>
 
     </div>
-
     <header>
-        <h1>To Do App</h1>
-        <h2 style="color: rgba(253, 228, 0, 0.798);">Start adding tasks to your list</h2>
+        <h1 style="font-size: 37px; color: white;">To Do App</h1>
+        <h2 style=" color: rgb(251, 232, 63);">Start adding tasks to your list</h2>
     </header>
 
     <main>
+        <!-- Clear all tasks -->
+        <button id="clearTasks">
+            <img id="clearImg">
+        </button>
+
         <input id="newtask" type="text" placeholder="Study Physics..." required>
         <button id="addtask"> Add Task </button>
     </main>
-
+    <span id="errormsg" style="display: none;">Can't create an empty task</span>
     <div id="tasklist">
 
 
