@@ -29,13 +29,13 @@ function addTask() {
     // Delete task button
     newTaskDelete.onclick = function () { newTaskDelete.parentElement.remove() };
 
-    taskImg.setAttribute("src", "unchecked.png") // Default img is unchecked.png
+    taskImg.setAttribute("src", "./To-Do-App/unchecked.png") // Default img is unchecked.png
     newTaskDiv.setAttribute("style", "box-shadow: 6px 6px red") // Default Container color is red
     // Toggle checked and unchecked img and style
     taskImg.onclick = function () {
         let imgAtrib = taskImg.getAttribute("src")
-        let newAtrib = imgAtrib == "checked.png" ? "unchecked.png" : "checked.png"
-        let divStyle = imgAtrib == "checked.png" ? "box-shadow: 6px 6px red" : "box-shadow: 6px 6px lightgreen"
+        let newAtrib = imgAtrib == "./To-Do-App/checked.png" ? "unchecked.png" : "checked.png"
+        let divStyle = imgAtrib == "./To-Do-App/checked.png" ? "box-shadow: 6px 6px red" : "box-shadow: 6px 6px lightgreen"
         taskImg.setAttribute("src", newAtrib)
         newTaskDiv.setAttribute("style", divStyle)
     }
