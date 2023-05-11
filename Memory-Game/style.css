@@ -1,0 +1,106 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: radial-gradient(circle at 50% 40%, rgba(2, 5, 87, 0.982) 1%, rgb(21, 23, 42) 50%);
+    color: rgb(221, 221, 221);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: system-ui;
+}
+
+h1 {
+    font-size: 40px;
+    color: white;
+    text-shadow: 3px 3px rgba(196, 165, 62, 0.641);
+}
+
+#game {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 40%;
+    gap: 2%;
+    background-color: transparent;
+}
+
+#game div {
+    background-color: rgb(250, 250, 250);
+    margin: 2%;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 6px 6px rgba(234, 219, 55, 0.783);
+    border: 1px solid black;
+    opacity: 0.85;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+#game div:hover {
+    opacity: 1;
+    scale: 1.02;
+    box-shadow: 7px 7px rgb(234, 219, 55);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+}
+
+button {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    box-shadow: 4px 4px rgb(0, 120, 74);
+    font-weight: 700;
+}
+
+button:hover {
+
+    box-shadow: -4px -4px rgb(200, 200, 41);
+}
+
+
+
+
+/* Github Header */
+#heading {
+    background-color: white;
+    height: 1%;
+    margin: 1%;
+    width: 12%;
+    border-radius: 10px;
+    color: black;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    display: flex;
+    gap: 5%;
+    padding: 5px;
+    transition: all .2s ease-in-out;
+}
+
+#heading:hover {
+    transform: scale(1.05);
+}
+
+#heading img {
+    width: 15%;
+    opacity: 1;
+}
+
+#heading h3 {
+    margin: 0;
+}
+
+#heading a {
+    text-decoration: none;
+    color: black;
+}
