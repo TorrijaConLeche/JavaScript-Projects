@@ -15,7 +15,7 @@ Disclaimer: I'm starting with JavaScript, that means the code is probably buggy 
 
 1. [To Do App](https://java-script-projects-ten.vercel.app/To-Do-App)
 
-2. Coming Soon
+2. [Vowel Counter](https://java-script-projects-ten.vercel.app/Vowel-Counter) 
 
 3. Coming Soon
 
