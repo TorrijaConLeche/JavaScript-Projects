@@ -1,11 +1,15 @@
+html {
+    height: 100%;
+}
+
 body {
-    background-color: rgb(21, 23, 42);
     color: rgb(255, 255, 255);
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-family: system-ui;
+    background: radial-gradient(circle at 65% 40%, rgb(5, 10, 94) 1%, rgb(21, 23, 42) 70%);
 }
 
 header {
