@@ -1,0 +1,172 @@
+@font-face {
+    font-family: delargo;
+    src: url(/main-page/content/delargo.ttf);
+}
+
+body {
+    background-color: #1b1c1a;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: system-ui;
+}
+
+
+
+h1 {
+    font-family: delargo;
+    letter-spacing: 4.5px;
+    font-size: 40px;
+    font-weight: 600;
+
+}
+
+h1 span {
+    color: #F0DB4F;
+    text-shadow: 4px 4px rgb(125, 20, 111);
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+    padding: 0;
+
+}
+
+#title img {
+    width: 6%;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+
+#title img:hover {
+    transform: scale(1.07);
+    box-shadow: 0px 0px 20px rgb(188, 173, 0);
+}
+
+#subtitle {
+    font-size: 20px;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 65%;
+    gap: 5%;
+    margin: 2%;
+    padding: 1%;
+    align-items: center;
+    text-align: center;
+}
+
+#eachdiv {
+    width: 95%;
+    cursor: pointer;
+    box-shadow: 4px 4px #a112a5;
+    background-color: rgb(218, 218, 218);
+    border-radius: 6px;
+    padding: 4%;
+    transition: all .2s ease-in-out;
+}
+
+#eachdiv:hover {
+    transform: scale(1.02);
+    box-shadow: 9px 9px #d2b604;
+
+}
+
+#eachdiv img {
+    width: 100%;
+    /*Perf res = 1430 827 */
+    height: auto;
+    border-radius: 6px;
+}
+
+#eachdiv span {
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Common Github Heading */
+#heading {
+    background-color: white;
+    margin-top: 2%;
+    width: 30%;
+    border-radius: 10px;
+    color: black;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    display: flex;
+    gap: 5%;
+    padding: 5px;
+    transition: all .2s ease-in-out;
+    box-shadow: 6px 6px black;
+}
+
+/* Common GITHUB HEADING */
+#heading {
+    background-color: white;
+    margin-top: 2%;
+    width: 15%;
+    border-radius: 10px;
+    color: black;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    display: flex;
+    gap: 5%;
+    padding: 5px;
+    transition: all .2s ease-in-out;
+    box-shadow: 6px 6px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+#heading:hover {
+    transform: scale(1.05);
+}
+
+#heading img {
+    width: 10%;
+}
+
+#heading h3 {
+    margin: 0;
+}
+
+#heading a {
+    text-decoration: none;
+    color: black;
+}
+
+/* FOOTER */
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2%;
+    gap: 2%;
+    padding: 1%;
+    flex-direction: row;
+    border-top: 2px solid rgb(110, 110, 110);
+}
+
+#footer img {
+    width: 5%;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+#footer img:hover {
+    transform: scale(1.1);
+}
+
+#footer span {
+    font-size: 18px;
+    font-weight: 500;
+}

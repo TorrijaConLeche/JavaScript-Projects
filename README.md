@@ -11,7 +11,7 @@ Disclaimer: I'm starting with JavaScript, that means the code is probably buggy 
 
 ## List Of Projects
 
-*You can visit [the main page](https://java-script-projects-ten.vercel.app/) to take a look at the final result of the projects.*
+*You can visit [the main page](https://java-script-projects-ten.vercel.app/) to explore the repository and its projects.*
 
 1. [Vowel Counter](https://java-script-projects-ten.vercel.app/Vowel-Counter)
 
