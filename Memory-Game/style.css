@@ -13,7 +13,7 @@ body {
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 44px;
     color: white;
     text-shadow: 3px 3px rgba(196, 165, 62, 0.641);
 }
@@ -24,6 +24,7 @@ h1 {
     width: 40%;
     gap: 2%;
     background-color: transparent;
+    margin: 2%;
 }
 
 #game div {
@@ -67,14 +68,46 @@ button:hover {
     box-shadow: -4px -4px rgb(200, 200, 41);
 }
 
+span {
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 6px;
+    margin: 0px 20px 0px 20px;
+    box-shadow: 2px 2px 2px rgb(255, 255, 255);
+    font-weight: 700;
+}
 
+#winstext {
+    background-color: rgb(1, 101, 1);
+}
 
+#failstext {
+    background-color: rgb(141, 6, 6);
+}
+
+#gametext {
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+}
+
+#icon {
+    width: 7.5%;
+    opacity: 1;
+    transition: all .2s ease-in-out;
+}
+
+#icon:hover {
+    transform: scale(1.1);
+}
 
 /* Github Header */
 #heading {
     background-color: white;
     height: 1%;
-    margin: 1%;
+    margin: 2%;
     width: 12%;
     border-radius: 10px;
     color: black;

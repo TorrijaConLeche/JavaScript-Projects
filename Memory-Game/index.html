@@ -10,32 +10,35 @@
 
 <body>
     <h1>Epic Memory Game 😎</h1>
+    <div id="gametext">
+        <span id="failstext">Fails: 0</span>
+        <img id="icon" src="/Memory-Game/content/cardicon.png">
+        <span id="winstext">Hits: 0 </span>
+    </div>
+
     <div id="game">
+
         <div>
-            <img id="img1" src="/Memory-Game/content/1.png">
+            <img id="img1" src="content/1.png">
         </div>
         <div>
-            <img id="img2" src="/Memory-Game/content/0.png">
+            <img id="img2" src="content/0.png">
         </div>
         <div>
-            <img id="img3" src="/Memory-Game/content/0.png">
+            <img id="img3" src="content/0.png">
         </div>
         <div>
-            <img id="img4" src="/Memory-Game/content/2.png">
+            <img id="img4" src="content/2.png">
         </div>
         <div>
-            <img id="img5" src="/Memory-Game/content/1.png">
+            <img id="img5" src="content/1.png">
         </div>
         <div>
-            <img id="img6" src="/Memory-Game/content/2.png">
+            <img id="img6" src="content/2.png">
         </div>
     </div>
 
-    <p id="failstext"></p>
-    <p id="winstext"></p>
-
-    <button id="randomize">Randomize Cards</button>
-
+    <button id="randomize">Restart Game</button>
     <div id="heading">
 
         <img id="github" src="/Memory-Game/content/github.png">
@@ -46,6 +49,10 @@
         </h3>
 
     </div>
+
+
+    <script src="confetti.js"></script>
+
 
 </body>
 

@@ -13,9 +13,12 @@ let failstext = document.getElementById("failstext")
 let winstext = document.getElementById("winstext")
 
 
+function createConfetti() {
+    confetti.start() // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+    setTimeout(function () { confetti.stop() }, 1000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+}
+
 for (let i = 0, len = elements.length; i < len; i++) {
-
-
 
     elements[i].onclick = checkImages
 
@@ -45,7 +48,7 @@ for (let i = 0, len = elements.length; i < len; i++) {
             else {
                 setTimeout(setFails, 100)
                 fails += 1
-                failstext.innerHTML = `Failed attempts: ${fails}`
+                failstext.innerHTML = `Fails: ${fails}`
             }
         }
     }
@@ -60,16 +63,26 @@ function setFails() {
 
 function setWins() {
     wins += 1
-    winstext.innerHTML = `Successful attempts: ${wins}`
+    if (wins === 3) { // 3 Number of card pairs // Must change if you add new cards
+        createConfetti()
+        winstext.innerHTML = `You Won!`
+    }
+    else {
+        winstext.innerHTML = `Hits: ${wins}`
+    }
     reset()
 }
 
+// RESET GAME VALUES
 function reset() {
     imageList = []     // Array para almacenar la url de las imagenes y compararlas
     imageIds = []       // Array de ids que identifican cada img
     tries = 0 // Times user click on card
 
 }
+
+
+// RESTART GAME FUNCTIONS TO RANDOMIZE CARDS
 
 let randomize = document.getElementById("randomize")
 
@@ -81,14 +94,14 @@ function randomizeCards() {
 
     for (let i = 0, len = elements.length; i < len; i++) {
         let image = elements[i].querySelector("img")
-        image.setAttribute('src', `/Memory-Game/content/${numArray[i]}.png`)
+        image.setAttribute('src', `content/${numArray[i]}.png`)
         image.setAttribute('style', "opacity: 0;")
         console.log(image)
     }
 
     reset()
-    winstext.innerHTML = ""
-    failstext.innerHTML = ""
+    winstext.innerHTML = "Hits: 0"
+    failstext.innerHTML = "Fails: 0"
     fails = 0 // Times user select cards that dont match
     wins = 0
 
