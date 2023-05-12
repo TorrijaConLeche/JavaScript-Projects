@@ -2,7 +2,7 @@
 
 Typical memory game with cards. I struggled a lot with this one, enjoy it :D
 
-You can view and example [here](https://java-script-projects-ten.vercel.app/Memory-Game)
+You can view an example [here](https://java-script-projects-ten.vercel.app/Memory-Game)
 
 Project idea by [Andy Sterkowitz](https://www.youtube.com/watch?v=roumzWd4XJU)
 
@@ -22,11 +22,11 @@ Project idea by [Andy Sterkowitz](https://www.youtube.com/watch?v=roumzWd4XJU)
 
 ### Ideas to make it more complex:
 
-- Add more cards to the game
+- Add more cards to the game.
 
-- Add winning effect i.e confetti library
+- Add winning effect i.e confetti library.
 
-- Loading bar while randomizing
+- Loading bar when restarting the game.
 
-- Add difficulty levels
+- Add difficulty levels.
 
