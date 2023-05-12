@@ -47,7 +47,7 @@ for (let i in projects) {
     eachtext.innerHTML = projects[i].name
 
     let eachimage = document.createElement("IMG") // Create image for each project
-    eachimage.setAttribute("src", ${projects[i].image})
+    eachimage.setAttribute("src", projects[i].image)
 
     eachdiv.append(eachimage, eachtext) // Append elements
     maindiv.appendChild(eachdiv)
