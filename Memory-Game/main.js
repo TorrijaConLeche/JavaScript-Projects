@@ -81,7 +81,7 @@ function randomizeCards() {
 
     for (let i = 0, len = elements.length; i < len; i++) {
         let image = elements[i].querySelector("img")
-        image.setAttribute('src', `content/${numArray[i]}.png`)
+        image.setAttribute('src', `/Memory-Game/content/${numArray[i]}.png`)
         image.setAttribute('style', "opacity: 0;")
         console.log(image)
     }

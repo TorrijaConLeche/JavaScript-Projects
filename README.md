@@ -13,10 +13,14 @@ Disclaimer: I'm starting with JavaScript, that means the code is probably buggy 
 
 *You can visit [the main page](https://java-script-projects-ten.vercel.app/) to take a look at the final result of the projects.*
 
-1. [To Do App](https://java-script-projects-ten.vercel.app/To-Do-App)
+1. [Vowel Counter](https://java-script-projects-ten.vercel.app/Vowel-Counter)
 
-2. [Vowel Counter](https://java-script-projects-ten.vercel.app/Vowel-Counter) 
+2. [To Do App](https://java-script-projects-ten.vercel.app/To-Do-App)
 
-3. Coming Soon
+3. [Memory Game](https://java-script-projects-ten.vercel.app/Memory-Game)
 
 4. Coming Soon
+
+.
+
+.
