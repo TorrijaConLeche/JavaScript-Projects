@@ -1,4 +1,4 @@
-import { wordsEnglish, wordsSpanish } from "/Hangman-game/words.js"
+import { wordsEnglish, wordsSpanish } from "/Hangman-Game/words.js"
 let words = wordsEnglish
 
 
