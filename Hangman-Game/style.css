@@ -1,0 +1,153 @@
+body {
+    background-color: rgb(21, 23, 42);
+    color: rgb(221, 221, 221);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: system-ui;
+}
+
+#rope {
+    position: fixed;
+    top: 0%;
+    left: 8%;
+    z-index: 1;
+}
+
+#hangicon {
+    position: fixed;
+    bottom: 0;
+    right: 15%;
+    width: 300px;
+    border-top: 3px solid black;
+}
+
+h1 {
+    font-size: 44px;
+    color: white;
+    text-shadow: 3px 3px rgb(128, 46, 195);
+    margin-bottom: 40px;
+}
+
+#game {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+
+#word {
+    font-size: 40px;
+    letter-spacing: 6px;
+}
+
+button {
+    padding: 10px 25px;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 5px 5px purple;
+    margin: 5px;
+    transition: all .2s ease-in-out;
+}
+
+button:hover {
+    background-color: rgb(200, 206, 206);
+    transform: scale(1.04);
+}
+
+button:disabled {
+    background-color: rgb(192, 192, 192);
+    color: rgb(34, 34, 34);
+    box-shadow: 5px 5px rgb(151, 79, 151);
+    transition: all .5s ease-in-out;
+}
+
+button:disabled:hover {
+    transform: none;
+}
+
+textarea {
+    width: 22%;
+    height: 60px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: #c5c5c5;
+    font-size: 16px;
+    resize: none;
+    margin: 2%;
+    outline: none;
+    box-shadow: 10px 10px 10px black;
+    transition: all .5s ease-in-out;
+}
+
+textarea:focus {
+    height: 100px;
+    width: 30%;
+    box-shadow: 8px 8px black;
+}
+
+#messagesdiv span {
+    margin-left: 30px;
+
+}
+
+#messagesdiv {
+    color: white;
+    font-size: 21px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    width: 30%;
+}
+
+#tried {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.letters {
+    background-color: rgb(106, 10, 98);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    justify-content: top;
+    align-items: center;
+    box-shadow: 4px 4px black;
+}
+
+.letters h3 {
+    margin: 0px;
+    font-size: 24px;
+}
+
+.letters span {
+    font-size: 22px;
+    color: rgb(190, 190, 190);
+    margin-top: 15px;
+
+}
+
+#buttons {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+}
+
+#lang {
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+#lang:hover {
+    transform: scale(1.1);
+}
+
+#langmessage {
+    margin-top: 10px;
+}

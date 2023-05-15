@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hangman Game</title>
+    <!-- Project from Andy Sterkowitz video: https://www.youtube.com/watch?v=roumzWd4XJU  -->
+    <link rel="stylesheet" href="/Hangman-Game/style.css">
+    <script type="module" src="/Hangman-Game/main.js"></script>
+
+</head>
+
+<body>
+    <h1> Epic Hangman Game</h1>
+    <img id="rope" src="/Hangman-Game/content/rope.png">
+    <img id="hangicon" src="/Hangman-Game/content/hangicon.png">
+    <div id="game">
+        <img id="hangimage">
+        <div id="tried">
+            <div class="letters">
+                <h3>Letters tried</h3>
+                <span id="bannedletters"></span>
+            </div>
+            <div class="letters">
+                <h3>Words tried</h3>
+                <span id="bannedwords"></span>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- Word -->
+    <h2 id="word"></h2>
+    <div id="messagesdiv">
+        <!-- Fails and win message -->
+        <span id="usermessage"></span>
+        <!-- Validation message -->
+        <span id="validmessage"></span>
+    </div>
+
+
+    <textarea id="userinput" placeholder="Input a letter or a word..."></textarea>
+    <div id="buttons">
+        <img id="lang" width="40px">
+        <button id="usersubmit">Submit</button>
+        <button id="userrestart">Restart Game</button>
+    </div>
+    <span id="langmessage"></span>
+
+
+</body>
+
+</html>
