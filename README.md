@@ -17,9 +17,9 @@ Disclaimer: I'm starting with JavaScript, that means the code is probably buggy 
 
 2. [Vowel Counter](https://java-script-projects-ten.vercel.app/Vowel-Counter) 
 
-3. Expense Tracker // Coming Soon
+3. [Memory Game](https://java-script-projects-ten.vercel.app/Memory-Game) 
 
-4. Memory Game // Coming Soon
+4. [Hangman Game](https://java-script-projects-ten.vercel.app/Hangman-Game)  
 
 
 ### More Project Ideas From @andysterks
