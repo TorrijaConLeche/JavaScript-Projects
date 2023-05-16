@@ -131,6 +131,7 @@ h1 {
 #word {
     font-size: 40px;
     letter-spacing: 6px;
+    white-space: pre;
 }
 
 button {
