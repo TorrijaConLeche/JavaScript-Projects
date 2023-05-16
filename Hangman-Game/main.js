@@ -10,6 +10,22 @@ let wordText = document.getElementById("word")
 let randomWord = words[Math.floor(Math.random() * words.length)] // Pick random word
 let userWord = []
 
+loadLang()
+
+function loadLang() {
+    // LOAD LANGUAGE 
+    let placeHder = document.getElementById("userinput")
+    let texttried = document.querySelectorAll("h3")
+
+    texttried[0].innerHTML = text.letters
+    texttried[1].innerHTML = text.words
+
+    placeHder.setAttribute("placeholder", text.placeholder)
+    userRestart.innerHTML = text.restartbutton
+    userSubmit.innerHTML = text.submitbutton
+
+}
+
 let usermessage = document.getElementById("usermessage")
 let validmessage = document.getElementById("validmessage")
 
@@ -27,8 +43,6 @@ let lang = document.getElementById("lang")
 let langmessage = document.getElementById("langmessage")
 lang.setAttribute("src", "/Hangman-Game/content/uk.png")
 langmessage.innerHTML = "Language: English"
-
-loadLang()
 
 
 lang.onclick = () => {
@@ -54,7 +68,7 @@ generateWord() // Initialize game
 userSubmit.onclick = () => { // Check if the letter / word is correct
 
     let userInput = document.getElementById("userinput").value // Collect user input
-    userInput = userInput.toLowerCase() // Convert to lower to avoid problems with mayus
+
     document.getElementById("userinput").value = "" // Reset <textarea> value
     validmessage.innerHTML = ""
     let wordArray = Array.from(randomWord) // Create array from the new word
@@ -75,20 +89,6 @@ userSubmit.onclick = () => { // Check if the letter / word is correct
 
 
 
-
-}
-
-function loadLang() {  // LOAD LANGUAGE 
-   
-    let placeHder = document.getElementById("userinput")
-    let texttried = document.querySelectorAll("h3")
-
-    texttried[0].innerHTML = text.letters
-    texttried[1].innerHTML = text.words
-
-    placeHder.setAttribute("placeholder", text.placeholder)
-    userRestart.innerHTML = text.restartbutton
-    userSubmit.innerHTML = text.submitbutton
 
 }
 
