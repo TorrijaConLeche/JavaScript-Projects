@@ -1,4 +1,4 @@
-import { wordsEnglish, wordsSpanish, textSpanish, textEnglish } from "/Hangman-Game/words.js"
+import { wordsEnglish, wordsSpanish, wordsSpecial, textSpanish, textEnglish } from "/Hangman-Game/words.js"
 let words = wordsEnglish
 
 let text = textEnglish // Load english messages asdefault
@@ -9,22 +9,6 @@ let userSubmit = document.getElementById("usersubmit") // Submit word / letetr b
 let wordText = document.getElementById("word")
 let randomWord = words[Math.floor(Math.random() * words.length)] // Pick random word
 let userWord = []
-
-loadLang()
-
-function loadLang() {
-    // LOAD LANGUAGE 
-    let placeHder = document.getElementById("userinput")
-    let texttried = document.querySelectorAll("h3")
-
-    texttried[0].innerHTML = text.letters
-    texttried[1].innerHTML = text.words
-
-    placeHder.setAttribute("placeholder", text.placeholder)
-    userRestart.innerHTML = text.restartbutton
-    userSubmit.innerHTML = text.submitbutton
-
-}
 
 let usermessage = document.getElementById("usermessage")
 let validmessage = document.getElementById("validmessage")
@@ -43,6 +27,24 @@ let lang = document.getElementById("lang")
 let langmessage = document.getElementById("langmessage")
 lang.setAttribute("src", "/Hangman-Game/content/uk.png")
 langmessage.innerHTML = "Language: English"
+
+let titletext = document.getElementById("titletext")
+let cont = 0
+titletext.onclick = () => {
+    if (cont === 5) {
+        cont = 0
+
+        words = wordsSpecial
+        restartGame()
+        generateWord()
+        document.querySelector("body").style.backgroundImage = "url('/Hangman-Game/content/charly.jfif')"
+        word.style.backgroundColor = "black"
+    }
+    else {
+        cont += 1
+    }
+}
+loadLang()
 
 
 lang.onclick = () => {
@@ -92,6 +94,22 @@ userSubmit.onclick = () => { // Check if the letter / word is correct
 
 }
 
+
+function loadLang() {
+    // LOAD LANGUAGE 
+    let placeHder = document.getElementById("userinput")
+    let texttried = document.querySelectorAll("h3")
+
+    texttried[0].innerHTML = text.letters
+    texttried[1].innerHTML = text.words
+
+    placeHder.setAttribute("placeholder", text.placeholder)
+    userRestart.innerHTML = text.restartbutton
+    userSubmit.innerHTML = text.submitbutton
+
+}
+
+
 // Si la letra introducida por el usuario coincide con la posicion x del 
 // array con la palabra, entonces la posicion x del array vacio (que muestra al jugador el progreso) toma el valor
 // introducido por el usuario
@@ -117,7 +135,7 @@ function checkLetter(wordArray, userInput) {
 
             userShow = userWord.join(" ") // Update value showed to the user
             wordText.textContent = userShow // Show value to the user
-
+            console.log("a", userShow)
         }
         else {
             userFails()
@@ -176,11 +194,19 @@ function generateWord() { // Function to pick a random word and show length to t
 
     // Create string to show the user new word length i.e (_ _ _ _)
     for (let i = 0; i < randomWord.length; i++) {
-        userShow = userShow + "_ "
-        userWord.push("_") // Modify array with the new word length
+        if (randomWord[i] === " ") {
+            userShow = userShow + " "
+
+            userWord.push(" ")
+        } else {
+            userShow = userShow + "_ "
+            userWord.push("_")
+        }
+        console.log(userShow)
+        // Modify array with the new word length
     }
 
-    wordText.innerHTML = userShow // Show _ to the user
+    wordText.innerHTML = userShow.toString() // Show _ to the user
 }
 
 function restartGame() {

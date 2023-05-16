@@ -88,6 +88,23 @@ export const wordsSpanish = [
     "cruz", "campaña", "asustada", "centavos", "vivimos", "galletas", "frecuencia", "daños", "minas"
 ]
 
+export const wordsSpecial = [
+    "na solo eso",
+    "no mames",
+    "explicao",
+    "por la caraaa",
+    "mfatm",
+    "see? naa",
+    "na que cabron",
+    "hombre si te pones asi",
+    "hostias que pedazo de cacho de puto cabron no?",
+    "amalio negro",
+    "si mira te cuento",
+    "pues a ver primero",
+    "padel con los hermanitos",
+    "sabeis a quien me monto yo?",
+]
+
 export const textEnglish = {
     letters: "Letters tried",
     words: "Words tried",
