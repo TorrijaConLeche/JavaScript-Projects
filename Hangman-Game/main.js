@@ -135,7 +135,7 @@ function checkLetter(wordArray, userInput) {
 
             userShow = userWord.join(" ") // Update value showed to the user
             wordText.textContent = userShow // Show value to the user
-            console.log("a", userShow)
+           
         }
         else {
             userFails()
@@ -202,7 +202,7 @@ function generateWord() { // Function to pick a random word and show length to t
             userShow = userShow + "_ "
             userWord.push("_")
         }
-        console.log(userShow)
+        
         // Modify array with the new word length
     }
 
