@@ -8,6 +8,98 @@ body {
     font-family: system-ui;
 }
 
+
+@media only screen and (max-device-width: 480px) {
+    body {
+        background-color: rgb(21, 23, 42);
+        height: 100%;
+        width: 100%;
+        margin-top: 40%;
+        padding: 0px;
+        justify-content: start;
+    }
+
+    html {
+        height: 100%;
+        width: 100%;
+    }
+
+    #rope {
+        position: fixed;
+        top: 0%;
+        left: 8%;
+        width: 300px;
+    }
+
+
+    #titletext {
+        font-size: 65px;
+        margin-bottom: 3%;
+    }
+
+    #userinput {
+        width: 40%;
+        margin-top: 3%;
+        margin-bottom: 5%;
+
+    }
+
+    #userinput:focus {
+        width: 50%;
+        box-shadow: 8px 8px black;
+    }
+
+    .letters {
+        margin-bottom: 8%;
+    }
+
+    #langmessage {
+        font-size: 18px;
+    }
+
+    #buttons {
+        margin-bottom: 20px;
+    }
+
+    /* Github Header */
+    #githeading {
+        background-color: red;
+        height: 1%;
+        margin: 2%;
+        width: 12%;
+        border-radius: 10px;
+        color: black;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        display: flex;
+        gap: 5%;
+        padding: 5px;
+        transition: all .2s ease-in-out;
+    }
+
+    #githeading:hover {
+        transform: scale(1.05);
+    }
+
+    #githeading img {
+        width: 15%;
+        opacity: 1;
+    }
+
+    #githeading h4 {
+        margin: 0px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    #githeading a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+
 #rope {
     position: fixed;
     top: 0%;
@@ -27,7 +119,7 @@ h1 {
     font-size: 44px;
     color: white;
     text-shadow: 3px 3px rgb(128, 46, 195);
-    margin-bottom: 40px;
+    margin-bottom: 5px;
 }
 
 #game {
@@ -69,7 +161,7 @@ button:disabled:hover {
 }
 
 textarea {
-    width: 22%;
+    width: 25%;
     height: 60px;
     padding: 12px 20px;
     box-sizing: border-box;
@@ -84,7 +176,6 @@ textarea {
 }
 
 textarea:focus {
-    height: 100px;
     width: 30%;
     box-shadow: 8px 8px black;
 }
@@ -150,4 +241,42 @@ textarea:focus {
 
 #langmessage {
     margin-top: 10px;
+}
+
+
+/* Github Header */
+#githeading {
+    background-color: white;
+    height: 1%;
+    margin: 2%;
+    width: 12%;
+    border-radius: 10px;
+    color: black;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    display: flex;
+    gap: 5%;
+    padding: 5px;
+    transition: all .2s ease-in-out;
+}
+
+#githeading:hover {
+    transform: scale(1.05);
+}
+
+#githeading img {
+    width: 15%;
+    opacity: 1;
+}
+
+#githeading h4 {
+    margin: 0px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#githeading a {
+    text-decoration: none;
+    color: black;
 }

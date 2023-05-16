@@ -88,5 +88,33 @@ export const wordsSpanish = [
     "cruz", "campaña", "asustada", "centavos", "vivimos", "galletas", "frecuencia", "daños", "minas"
 ]
 
+export const textEnglish = {
+    letters: "Letters tried",
+    words: "Words tried",
+    placeholder: "Input a letter or a word...",
+    submitbutton: "Submit",
+    restartbutton: "Restart Game",
+    fails: "Fails: ",
+    validmsg: "Please enter a valid word",
+    winmsg: "You won the game!",
+    losemsg: "You lost, the word was ",
+    repeatmsg: "Please don't repeat words or letters"
+}
+
+export const textSpanish = {
+    letters: "Letras usadas",
+    words: "Palabras usadas",
+    placeholder: "Introduce una letra o una palabra...",
+    submitbutton: "Enviar",
+    restartbutton: "Reiniciar",
+    fails: "Fallos: ",
+    validmsg: "Introduce una palabra valida",
+    winmsg: "Has ganado!",
+    losemsg: "Has perdido, la palabra era ",
+    repeatmsg: "Porfavor no repitas palabras o letras"
+}
+
+
+
 
 // https://github.com/bpropelled/English-Words-Array/blob/master/words.js

@@ -15,9 +15,9 @@ const projects = {
         url: "/Memory-Game"
     },
     4: {
-        name: "Coming Soon",
-        image: "/main-page/content/soon.jpg",
-        url: "/soon"
+        name: "Hangman Game",
+        image: "/main-page/content/hangman-game.png",
+        url: "/Hangman-Game"
     },
     5: {
         name: "Coming Soon",

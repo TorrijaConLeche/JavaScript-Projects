@@ -1,7 +1,7 @@
-import { wordsEnglish, wordsSpanish } from "/Hangman-Game/words.js"
+import { wordsEnglish, wordsSpanish, textSpanish, textEnglish } from "/Hangman-Game/words.js"
 let words = wordsEnglish
 
-
+let text = textEnglish // Load english messages asdefault
 
 let userRestart = document.getElementById("userrestart") // Restart game button
 let userSubmit = document.getElementById("usersubmit") // Submit word / letetr button
@@ -9,6 +9,22 @@ let userSubmit = document.getElementById("usersubmit") // Submit word / letetr b
 let wordText = document.getElementById("word")
 let randomWord = words[Math.floor(Math.random() * words.length)] // Pick random word
 let userWord = []
+
+loadLang()
+
+function loadLang() {
+    // LOAD LANGUAGE 
+    let placeHder = document.getElementById("userinput")
+    let texttried = document.querySelectorAll("h3")
+
+    texttried[0].innerHTML = text.letters
+    texttried[1].innerHTML = text.words
+
+    placeHder.setAttribute("placeholder", text.placeholder)
+    userRestart.innerHTML = text.restartbutton
+    userSubmit.innerHTML = text.submitbutton
+
+}
 
 let usermessage = document.getElementById("usermessage")
 let validmessage = document.getElementById("validmessage")
@@ -28,18 +44,22 @@ let langmessage = document.getElementById("langmessage")
 lang.setAttribute("src", "/Hangman-Game/content/uk.png")
 langmessage.innerHTML = "Language: English"
 
+
 lang.onclick = () => {
     if (lang.getAttribute("src") === "/Hangman-Game/content/uk.png") {
         words = wordsSpanish
+        text = textSpanish // Change language
         lang.setAttribute("src", "/Hangman-Game/content/spain.png")
-        langmessage.innerHTML = "Language: Spanish"
+        langmessage.innerHTML = "Idioma: Español"
 
     } else {
         words = wordsEnglish
+        text = textEnglish
         lang.setAttribute("src", "/Hangman-Game/content/uk.png")
         langmessage.innerHTML = "Language: English"
     }
     generateWord()
+    loadLang()
 }
 
 
@@ -52,7 +72,7 @@ userSubmit.onclick = () => { // Check if the letter / word is correct
     document.getElementById("userinput").value = "" // Reset <textarea> value
     validmessage.innerHTML = ""
     let wordArray = Array.from(randomWord) // Create array from the new word
-    console.log(randomWord)
+
 
     // Check if user introduced word of letter  
     if (userInput.length === randomWord.length) {
@@ -64,7 +84,7 @@ userSubmit.onclick = () => { // Check if the letter / word is correct
         checkLetter(wordArray, userInput)
     }
     else { // If the word is not valid because of length
-        validmessage.innerHTML = "Please enter a valid word"
+        validmessage.innerHTML = text.validmsg
     }
 
 
@@ -79,7 +99,7 @@ userSubmit.onclick = () => { // Check if the letter / word is correct
 function checkLetter(wordArray, userInput) {
 
     if (bannedLetters.includes(userInput)) { // Check if the letter had already been entered
-        validmessage.innerHTML = "Please enter don't repeat letters.. "
+        validmessage.innerHTML = text.repeatmsg
     }
 
     else {
@@ -90,11 +110,9 @@ function checkLetter(wordArray, userInput) {
                 }
             }
 
-            console.log("userWord: ", userWord)
-            console.log("wordArray: ", wordArray)
 
             if (userWord.toString() == wordArray.toString()) { // Check if the user won the game
-                usermessage.innerHTML = "You won the game"
+                usermessage.innerHTML = text.winmsg
             }
 
             userShow = userWord.join(" ") // Update value showed to the user
@@ -123,7 +141,6 @@ function checkWord(userInput, wordArray) {
     }
 
     else {
-        console.log("no") // If it doesn't match
         bannedWords.push(userInput)
         bannedWordsText.innerHTML = bannedWords.join(" ")
         userFails()
@@ -135,10 +152,11 @@ function userFails() { // Execute when user fails
     image.setAttribute("src", `/Hangman-Game/content/hang${fails}.gif`)
 
     if (fails == 6) {
-        usermessage.innerHTML = "You lose" // User lost game
+        usermessage.innerHTML = text.losemsg + randomWord // User lost game
+        wordText.textContent = randomWord
         userSubmit.disabled = true
     } else {
-        usermessage.innerHTML = `Fails: ${fails}`
+        usermessage.innerHTML = `${text.fails} ${fails}`
     }
 
 }
@@ -154,7 +172,7 @@ function generateWord() { // Function to pick a random word and show length to t
 
     // Generate new word:
     randomWord = words[Math.floor(Math.random() * words.length)] // Pick new word
-    console.log(randomWord)
+
 
     // Create string to show the user new word length i.e (_ _ _ _)
     for (let i = 0; i < randomWord.length; i++) {
@@ -170,7 +188,7 @@ function restartGame() {
     userWord = []
     fails = 0
     image.setAttribute("src", `/Hangman-Game/content/hang0.gif`) // Show 1st step image
-    usermessage.innerHTML = `Fails: ${fails}`
+    usermessage.innerHTML = `${text.fails} ${fails}`
     document.getElementById("userinput").value = ""
     bannedWords = []
     bannedLetters = []
