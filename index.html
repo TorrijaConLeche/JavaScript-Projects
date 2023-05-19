@@ -5,6 +5,7 @@
     <title>Just JavaScript</title>
     <link rel="icon" type="image/x-icon" href="/main-page/content/js.png">
     <link rel="stylesheet" href="/main-page/style.css">
+    <link rel="stylesheet" href="/main-page/range.css">
     <script type="module" src="/main-page/main.js"></script>
 </head>
 
@@ -16,18 +17,34 @@
 
     <span id="subtitle">A a repository full of projects with which to learn JavaScript</span>
 
-    <div id="heading">
+    <div id="elements">
 
-        <img id="github" src="/Memory-Game/content/github.png">
-        <h3>
-            <a target="_blank" href="https://github.com/TorrijaConLeche/JavasCript-Projects/tree/main/Memory-Game">
-                View on Github
-            </a>
-        </h3>
+        <div id="sortdiv">
+            <button id="sort">
+                Sort<img src="/main-page/content/sort.png">
+            </button>
+        </div>
 
+        <div id="heading">
+
+            <img id="github" src="/Memory-Game/content/github.png">
+            <h3>
+                <a target="_blank" href="https://github.com/TorrijaConLeche/JavasCript-Projects/tree/main/Memory-Game">
+                    View on Github
+                </a>
+            </h3>
+
+        </div>
+
+        <div id="filterdiv">
+            <input id="filter" type="range">
+            <span id="rangevalue">Filter</span>
+        </div>
     </div>
 
+
     <div id="container">
+
     </div>
 
     <div id="footer">
@@ -35,6 +52,7 @@
             src="/main-page/content/linkedin.png">
         <span>Created By Alejandro Aranda</span>
     </div>
+
 </body>
 
 </html>

@@ -14,18 +14,61 @@ body {
 }
 
 
+#elements {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 1%;
+    padding: 10px 10px;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    background-color: rgb(60, 57, 57);
+    border-radius: 10px;
+    box-shadow: 6px 6px rgb(21, 21, 21);
+}
+
+#sortdiv {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#sort {
+    padding: 6px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    font-size: 19px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 10%;
+    border: none;
+    box-shadow: 4px 4px black;
+}
+
+
+#sort:hover {
+    transform: scale(1.05);
+}
+
+#sort img {
+    width: 28px;
+    height: auto;
+}
 
 h1 {
     font-family: delargo;
     letter-spacing: 4.5px;
     font-size: 40px;
     font-weight: 600;
-
 }
 
 h1 span {
     color: #F0DB4F;
-    text-shadow: 4px 4px rgb(125, 20, 111);
+    text-shadow: 4px 4px #a112a5;
 }
 
 #title {
@@ -38,7 +81,7 @@ h1 span {
 }
 
 #title img {
-    width: 6%;
+    width: 5%;
     border-radius: 10px;
     transition: all .3s ease-in-out;
 }
@@ -55,9 +98,9 @@ h1 span {
 #container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    width: 65%;
+    width: 60%;
     gap: 5%;
-    margin: 2%;
+    margin: 1%;
     padding: 1%;
     align-items: center;
     text-align: center;
@@ -69,7 +112,7 @@ h1 span {
     box-shadow: 4px 4px #a112a5;
     background-color: rgb(218, 218, 218);
     border-radius: 6px;
-    padding: 4%;
+    padding: 6% 3%;
     transition: all .2s ease-in-out;
 }
 
@@ -80,9 +123,8 @@ h1 span {
 }
 
 #eachdiv img {
-    width: 100%;
-    /*Perf res = 1430 827 */
-    height: auto;
+    width: 250px;
+    height: 150px;
     border-radius: 6px;
 }
 
@@ -92,40 +134,43 @@ h1 span {
     font-weight: 600;
 }
 
+
+.difficulty {
+    width: 70%;
+    height: auto;
+    margin-top: 2%;
+    align-items: center;
+    align-self: center;
+    margin: 2% auto 2% auto;
+    background-color: #ffffff;
+    color: black;
+    border-radius: 6px;
+}
+
+.difficulty div {
+    width: 100%;
+    height: 12px;
+    border-radius: 6px 6px 6px 6px;
+}
+
 /* Common Github Heading */
 #heading {
     background-color: white;
-    margin-top: 2%;
-    width: 30%;
+    width: 70%;
     border-radius: 10px;
     color: black;
     justify-content: center;
     justify-items: center;
     align-items: center;
+    justify-self: center;
     display: flex;
     gap: 5%;
+    margin: 0px;
     padding: 5px;
     transition: all .2s ease-in-out;
     box-shadow: 6px 6px black;
 }
 
-/* Common GITHUB HEADING */
-#heading {
-    background-color: white;
-    margin-top: 2%;
-    width: 15%;
-    border-radius: 10px;
-    color: black;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    display: flex;
-    gap: 5%;
-    padding: 5px;
-    transition: all .2s ease-in-out;
-    box-shadow: 6px 6px rgb(0, 0, 0);
-    cursor: pointer;
-}
 
 #heading:hover {
     transform: scale(1.05);
