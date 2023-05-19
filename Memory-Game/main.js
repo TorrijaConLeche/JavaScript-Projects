@@ -26,31 +26,40 @@ for (let i = 0, len = elements.length; i < len; i++) {
 
         let image = elements[i].querySelector("img") // IMG ELEMENTS
 
-        let imageAttr = image.getAttribute("src") // Store img attributes to compare
-        let imgId = image.getAttribute("id")
+        if (image.getAttribute("class") !== "disabled") { // Don't work in disabled images
 
-        imageList.push(imageAttr)
+            let imageAttr = image.getAttribute("src") // Store img attributes to compare
+            let imgId = image.getAttribute("id")
 
-        imageIds.push(imgId)
+            imageList.push(imageAttr)
 
-        console.log("A", imageList)
+            imageIds.push(imgId)
 
-        image.setAttribute("style", "opacity: 1;")
+            image.setAttribute("style", "opacity: 1;")
 
-        tries += 1
-        console.log("Tries: ", tries)
+            tries += 1
 
-        if (tries === 2) {
 
-            if (imageList[0] === imageList[1]) {
-                setWins()
+            if (tries === 2) {
+
+                if (imageList[0] === imageList[1]) { // Disable images
+                    document.getElementById(imageIds[0]).setAttribute("class", "disabled")
+                    document.getElementById(imageIds[1]).setAttribute("class", "disabled")
+                    document.getElementById(imageIds[0]).setAttribute("style", "opacity:0.65;")
+                    document.getElementById(imageIds[1]).setAttribute("style", "opacity:0.65;")
+                    setWins()
+                }
+                else {
+                    setTimeout(setFails, 100)
+                    fails += 1
+                    failstext.innerHTML = `Fails: ${fails}`
+                }
             }
-            else {
-                setTimeout(setFails, 100)
-                fails += 1
-                failstext.innerHTML = `Fails: ${fails}`
-            }
+        } else {
+            alert("This card is disabled")
         }
+
+
     }
 }
 
