@@ -26,7 +26,7 @@ export let projects = {
     5: {
         name: "Coming Soon",
         image: "/main-page/content/soon.jpg",
-        url: "/soon",
+        url: "/card-generator",
         diff: 0
     },
     6: {
