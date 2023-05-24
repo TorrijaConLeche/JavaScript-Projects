@@ -1,0 +1,133 @@
+#card {
+    background-color: rgb(6, 5, 5);
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    place-self: center;
+    box-shadow: 0px 0px 22px white;
+    padding: 1%;
+    padding-bottom: 20px;
+    padding-top: 0px;
+
+}
+
+#cardbg {
+    width: 25%;
+    padding: 6px 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border: 1px solid white;
+    box-shadow: 0px 1px 10px rgb(126, 126, 126);
+
+}
+
+#name {
+    font-size: 32px;
+    margin: 10px;
+}
+
+#imagediv img {
+    width: 280px;
+    height: 280px;
+}
+
+#info {
+    display: flex;
+    width: 100%;
+}
+
+#types {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    gap: 13px;
+    height: auto;
+    padding: 5px;
+}
+
+#types span {
+    background-color: rgb(4, 108, 18);
+    padding: 4px 18px;
+    text-align: center;
+    place-self: center;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 6px;
+    box-shadow: 3px 3px 0px rgb(255, 255, 255);
+}
+
+#types h3 {
+    margin: 8px;
+}
+
+#moves {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    width: 50%;
+    height: auto;
+    padding: 5px;
+}
+
+#moves span {
+    background-color: rgb(21, 26, 22);
+    padding: 4px 18px;
+    text-align: center;
+    place-self: center;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 6px;
+    box-shadow: 3px 3px 0px rgb(255, 255, 255);
+    margin: 0;
+}
+
+#moves h3 {
+    margin: 8px;
+}
+
+
+#stats {
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 20px 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+.stat {
+    background-color: aliceblue;
+    width: 100px;
+    place-self: center;
+    display: flex;
+}
+
+.statcontent {
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+}
+
+.statbar {
+    background-color: gray;
+    place-content: center;
+    width: 110px;
+    height: 10px;
+}
+
+.statcontent span {
+    width: 45px;
+}
