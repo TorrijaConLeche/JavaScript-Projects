@@ -1,5 +1,3 @@
-let pokeButton = document.getElementById("pokesubmit")
-
 let typeColors = {
     Normal: "C3BDBC",
     Dragon: "1C10AB",
@@ -21,18 +19,25 @@ let typeColors = {
     Ground: "C8A01E"
 }
 
+let pokeButton = document.getElementById("pokesubmit")
+
 pokeButton.onclick = async function () {
-    let pokeName = document.getElementById("pokename").value
+    let pokemonInput = document.getElementById("pokename")
+    let pokeName = pokemonInput.value.toLowerCase()
     getPokemon(pokeName) // change
+    pokemonInput.value = "" // Reset input field
 
 }
+
 getPokemon(`${Math.floor(Math.random() * 1000)}`)
+
 async function getPokemon(pokeName) {
 
     let API_URL = `https://pokeapi.co/api/v2/pokemon/${pokeName}`
     let res = await fetch(API_URL)
     let pokemon = await res.json()
     console.log(pokemon)
+
 
     let pokeImg = pokemon.sprites.other.home.front_default
     let pokeTypes = pokemon.types
@@ -44,7 +49,7 @@ async function getPokemon(pokeName) {
 }
 
 function updateCard(pokeName, pokeImg, pokeTypes, pokeMoves) {
-    let pName = document.getElementById("name")
+    let pName = document.getElementById("poketextname")
     let image = document.getElementById("image")
     let types = document.getElementById("types")
     let moves = document.getElementById("moves")
@@ -67,7 +72,7 @@ function updateCard(pokeName, pokeImg, pokeTypes, pokeMoves) {
         }
 
         newtype.innerHTML = type
-        types.appendChild(newtype)
+        types.appendChild(newtype) // Append element with type to the cards
     }
 
     // Iterate through the moves array

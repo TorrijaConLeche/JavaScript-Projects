@@ -1,0 +1,28 @@
+/*Customize card css*/
+
+#customize {
+    padding: 2%;
+}
+
+#customdiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2%;
+    width: 100%;
+
+}
+
+#customdiv div {
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#cardsection {
+    place-content: center;
+}
+
+#poketextname {
+    margin: 8%;
+}

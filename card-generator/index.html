@@ -3,91 +3,177 @@
 
 <head>
     <meta charset="UTF-8">
+
     <link rel="stylesheet" href="/card-generator/style.css">
     <link rel="stylesheet" href="/card-generator/card.css">
+    <link rel="stylesheet" href="/card-generator/custom.css">
+
     <script type="module" src="/card-generator/main.js"></script>
+    <script type="module" src="/card-generator/custom.js"></script>
     <title>Pokemon Cards</title>
 </head>
 
 <body>
-    <title>Sudoku</title>
-    <h1>Pokemon Cards</h1>
+    <header>
+        <h1>Pokemon Card Generator</h1>
+    </header>
+    <section id="container">
 
 
-    <div id="search">
-        <input placeholder="Pokemon Name..." type="text" id="pokename">
+        <section id="cardsection">
 
-        <button id="pokesubmit">GO!</button>
-    </div>
+            <div id="cardbg">
+                <div id="card">
 
-    <div id="cardbg">
+                    <div id="imagediv">
+                        <img id="image">
+                    </div>
 
+                    <h2 id="poketextname"></h2>
 
-        <div id="card">
+                    <div id="info">
 
-            <div id="imagediv">
-                <img id="image">
+                        <div id="types">
+
+                        </div>
+
+                        <div id="moves">
+
+                        </div>
+
+                    </div>
+                    <div id="stats">
+                        <div class="statcontent">
+                            <span>HP</span>
+                            <div class="stat">
+                                <div id="HP" class="statbar"></div>
+                            </div>
+                        </div>
+
+                        <div class="statcontent">
+                            <span>ATT</span>
+                            <div class="stat">
+                                <div id="ATT" class="statbar"></div>
+                            </div>
+                        </div>
+                        <div class="statcontent">
+                            <span>DEF</span>
+                            <div class="stat">
+                                <div id="DEF" class="statbar"></div>
+                            </div>
+                        </div>
+
+                        <div class="statcontent">
+                            <span>S.ATT</span>
+                            <div class="stat">
+                                <div id="S.ATT" class="statbar"></div>
+                            </div>
+                        </div>
+
+                        <div class="statcontent">
+                            <span>S.DEF</span>
+                            <div class="stat">
+                                <div id="S.DEF" class="statbar"></div>
+                            </div>
+                        </div>
+
+                        <div class="statcontent">
+                            <span>SPD</span>
+                            <div class="stat">
+                                <div id="SPD" class="statbar"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
 
-            <h2 id="name">Pikachu</h2>
+        </section>
 
-            <div id="info">
+        <section id="customize">
+            <h2>Customize Your Card</h2>
+            <div id="search">
+                <input placeholder="Pokemon Name..." type="text" id="pokename">
 
-                <div id="types">
-
-                </div>
-
-                <div id="moves">
-
-                </div>
-
-            </div>
-            <div id="stats">
-                <div class="statcontent">
-                    <span>HP</span>
-                    <div class="stat">
-                        <div id="HP" class="statbar"></div>
-                    </div>
-                </div>
-
-                <div class="statcontent">
-                    <span>ATT</span>
-                    <div class="stat">
-                        <div id="ATT" class="statbar"></div>
-                    </div>
-                </div>
-                <div class="statcontent">
-                    <span>DEF</span>
-                    <div class="stat">
-                        <div id="DEF" class="statbar"></div>
-                    </div>
-                </div>
-
-                <div class="statcontent">
-                    <span>S.ATT</span>
-                    <div class="stat">
-                        <div id="S.ATT" class="statbar"></div>
-                    </div>
-                </div>
-
-                <div class="statcontent">
-                    <span>S.DEF</span>
-                    <div class="stat">
-                        <div id="S.DEF" class="statbar"></div>
-                    </div>
-                </div>
-
-                <div class="statcontent">
-                    <span>SPD</span>
-                    <div class="stat">
-                        <div id="SPD" class="statbar"></div>
-                    </div>
-                </div>
+                <button id="pokesubmit">GO!</button>
             </div>
 
-        </div>
+            <div id="customdiv">
 
-    </div>
+                <!-- CARD WIDTH, ETC.. INPUTS -->
+                <div id="colordiv">
+                    <h2>Card</h2>
+
+                    <label>Background</label>
+                    <input type="color" id="bgcolor" name="bgcolor">
+
+                    <label>Width</label>
+                    <input type="range" id="widthrange" name="cardwidth" value="55" min="48" max="100">
+
+                </div>
+                <!-- BORDER INPUTS -->
+                <div id="borderdiv">
+                    <h2>Border</h2>
+
+                    <label>Color</label>
+                    <input type="color" id="bordercolor" name="bordercolor" value="#FFFFFF">
+
+                    <label>Width</label>
+                    <input type="range" id="bordersize" value="1" min="0" max="50" name="bordersize">
+
+                    <label>Border Radius</label>
+                    <input type="range" id="borderadius" value="0" min="0" max="50" name="borderadius">
+
+                </div>
+                <!-- BOX SHADOW INPUTS -->
+                <div id="boxshadowdiv">
+                    <h2>Box Shadow</h2>
+
+                    <label>Color</label>
+                    <input type="color" id="boxshadowcolor" name="boxshadow" value="#FFFFFF">
+
+                    <label>X Position</label>
+                    <input type="range" id="boxshadowx" name="boxshadow" min="-120" max="120">
+
+                    <label>Y Position</label>
+                    <input type="range" id="boxshadowy" name="boxshadow" min="-120" max="120">
+
+                    <label>Blur</label>
+                    <input type="range" id="boxshadowblur" name="boxshadow" value="22" min="0" max="200">
+
+                    <label>Size</label>
+                    <input type="range" id="boxshadowsize" name="boxshadow" value="0" min="0" max="120">
+                </div>
+                <!-- Card Elements -->
+                <div id="elementsdiv">
+                    <h2>Card Elements</h2>
+
+                    <h3>Name</h3>
+
+                    <label>Color</label>
+                    <input type="color" id="pokenamecolor" value="#FFFFFF">
+
+                    <label>Size</label>
+                    <input type="range" id="pokenamesize" value="36" min="0" max="80">
+
+                    <h3>Stats</h3>
+
+                    <label>Text color</label>
+                    <input type="color" id="statextcolor" value="#FFFFFF">
+
+                    <label>Text size</label>
+                    <input type="range" id="statnamesize" min="0" max="120">
+
+                    <label>Stat 1st color</label>
+                    <input type="color" id="statbarcolor" value="#5f0873">
+
+                    <label>Stat 2nd color</label>
+                    <input type="color" id="statbgcolor" value="#FFFFFF">
+                </div>
+            </div>
+        </section>
+    </section>
 
     <body>
 
