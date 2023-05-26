@@ -14,8 +14,9 @@
 </head>
 
 <body>
+
     <header>
-        <h1>Pokemon Card Generator</h1>
+        <img src="/card-generator/content/logo.png" id="pokelogo">
     </header>
     <section id="container">
 
@@ -44,41 +45,41 @@
                     </div>
                     <div id="stats">
                         <div class="statcontent">
-                            <span>HP</span>
+                            <span class="statext">HP</span>
                             <div class="stat">
                                 <div id="HP" class="statbar"></div>
                             </div>
                         </div>
 
                         <div class="statcontent">
-                            <span>ATT</span>
+                            <span class="statext">ATT</span>
                             <div class="stat">
                                 <div id="ATT" class="statbar"></div>
                             </div>
                         </div>
                         <div class="statcontent">
-                            <span>DEF</span>
+                            <span class="statext">DEF</span>
                             <div class="stat">
                                 <div id="DEF" class="statbar"></div>
                             </div>
                         </div>
 
                         <div class="statcontent">
-                            <span>S.ATT</span>
+                            <span class="statext">S.ATT</span>
                             <div class="stat">
                                 <div id="S.ATT" class="statbar"></div>
                             </div>
                         </div>
 
                         <div class="statcontent">
-                            <span>S.DEF</span>
+                            <span class="statext">S.DEF</span>
                             <div class="stat">
                                 <div id="S.DEF" class="statbar"></div>
                             </div>
                         </div>
 
                         <div class="statcontent">
-                            <span>SPD</span>
+                            <span class="statext">SPD</span>
                             <div class="stat">
                                 <div id="SPD" class="statbar"></div>
                             </div>
@@ -92,7 +93,7 @@
         </section>
 
         <section id="customize">
-            <h2>Customize Your Card</h2>
+            <h1 id="subtitle">Customize Your Card</h1>
             <div id="search">
                 <input placeholder="Pokemon Name..." type="text" id="pokename">
 
@@ -104,72 +105,87 @@
                 <!-- CARD WIDTH, ETC.. INPUTS -->
                 <div id="colordiv">
                     <h2>Card</h2>
+                    <div class="innerInputs">
+                        <span>Background</span>
+                        <input type="color" id="bgcolor" name="bgcolor">
+                    </div>
 
-                    <label>Background</label>
-                    <input type="color" id="bgcolor" name="bgcolor">
-
-                    <label>Width</label>
-                    <input type="range" id="widthrange" name="cardwidth" value="55" min="48" max="100">
+                    <div class="innerInputs">
+                        <span>Width</span>
+                        <input type="range" id="widthrange" name="cardwidth" value="55" min="48" max="100">
+                    </div>
+                    <h3>Name</h3>
+                    <div class="innerInputs">
+                        <span>Color</span>
+                        <input type="color" id="pokenamecolor" value="#FFFFFF">
+                    </div>
+                    <div class="innerInputs">
+                        <span>Size</span>
+                        <input type="range" id="pokenamesize" value="36" min="0" max="80">
+                    </div>
 
                 </div>
                 <!-- BORDER INPUTS -->
                 <div id="borderdiv">
                     <h2>Border</h2>
-
-                    <label>Color</label>
-                    <input type="color" id="bordercolor" name="bordercolor" value="#FFFFFF">
-
-                    <label>Width</label>
-                    <input type="range" id="bordersize" value="1" min="0" max="50" name="bordersize">
-
-                    <label>Border Radius</label>
-                    <input type="range" id="borderadius" value="0" min="0" max="50" name="borderadius">
-
+                    <div class="innerInputs">
+                        <span>Color</span>
+                        <input type="color" id="bordercolor" name="bordercolor" value="#FFFFFF">
+                    </div>
+                    <div class="innerInputs">
+                        <span>Width</span>
+                        <input type="range" id="bordersize" value="1" min="0" max="50" name="bordersize">
+                    </div>
+                    <div class="innerInputs">
+                        <span>Radius</span>
+                        <input type="range" id="borderadius" value="0" min="0" max="50" name="borderadius">
+                    </div>
                 </div>
                 <!-- BOX SHADOW INPUTS -->
                 <div id="boxshadowdiv">
                     <h2>Box Shadow</h2>
-
-                    <label>Color</label>
-                    <input type="color" id="boxshadowcolor" name="boxshadow" value="#FFFFFF">
-
-                    <label>X Position</label>
-                    <input type="range" id="boxshadowx" name="boxshadow" min="-120" max="120">
-
-                    <label>Y Position</label>
-                    <input type="range" id="boxshadowy" name="boxshadow" min="-120" max="120">
-
-                    <label>Blur</label>
-                    <input type="range" id="boxshadowblur" name="boxshadow" value="22" min="0" max="200">
-
-                    <label>Size</label>
-                    <input type="range" id="boxshadowsize" name="boxshadow" value="0" min="0" max="120">
+                    <div class="innerInputs">
+                        <span>Color</span>
+                        <input type="color" id="boxshadowcolor" name="boxshadow" value="#FFFFFF">
+                    </div>
+                    <div class="innerInputs">
+                        <span>X Pos</span>
+                        <input type="range" id="boxshadowx" name="boxshadow" min="-120" max="120">
+                    </div>
+                    <div class="innerInputs">
+                        <span>Y Pos</span>
+                        <input type="range" id="boxshadowy" name="boxshadow" min="-120" max="120">
+                    </div>
+                    <div class="innerInputs">
+                        <span>Blur</span>
+                        <input type="range" id="boxshadowblur" name="boxshadow" value="22" min="0" max="200">
+                    </div>
+                    <div class="innerInputs">
+                        <span>Size</span>
+                        <input type="range" id="boxshadowsize" name="boxshadow" value="0" min="0" max="120">
+                    </div>
                 </div>
                 <!-- Card Elements -->
                 <div id="elementsdiv">
                     <h2>Card Elements</h2>
 
-                    <h3>Name</h3>
-
-                    <label>Color</label>
-                    <input type="color" id="pokenamecolor" value="#FFFFFF">
-
-                    <label>Size</label>
-                    <input type="range" id="pokenamesize" value="36" min="0" max="80">
-
                     <h3>Stats</h3>
-
-                    <label>Text color</label>
-                    <input type="color" id="statextcolor" value="#FFFFFF">
-
-                    <label>Text size</label>
-                    <input type="range" id="statnamesize" min="0" max="120">
-
-                    <label>Stat 1st color</label>
-                    <input type="color" id="statbarcolor" value="#5f0873">
-
-                    <label>Stat 2nd color</label>
-                    <input type="color" id="statbgcolor" value="#FFFFFF">
+                    <div class="innerInputs">
+                        <span>Text color</span>
+                        <input type="color" id="statextcolor" value="#FFFFFF">
+                    </div>
+                    <div class="innerInputs">
+                        <span>Size</span>
+                        <input type="range" id="statnamesize" value="16" min="0" max="120">
+                    </div>
+                    <div class="innerInputs">
+                        <span>1st color</span>
+                        <input type="color" id="statbarcolor" value="#5f0873">
+                    </div>
+                    <div class="innerInputs">
+                        <span>2nd color</span>
+                        <input type="color" id="statbgcolor" value="#FFFFFF">
+                    </div>
                 </div>
             </div>
         </section>

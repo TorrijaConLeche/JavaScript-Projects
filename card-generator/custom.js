@@ -33,6 +33,8 @@ function updateStyles() {
     // STAT BARS
     let statbars = document.getElementsByClassName("statbar")
     let statbarsBG = document.getElementsByClassName("stat")
+    let statext = document.getElementsByClassName("statext")
+
     for (let i = 0; i < statbars.length; i++) {
         let wide = statbars[i].getAttribute("style")
         statbars[i].setAttribute("style", `
@@ -44,6 +46,11 @@ function updateStyles() {
         statbarsBG[i].setAttribute("style", `
         ${wideBG}
         background-color: ${statbgcolor.value};
+        `)
+
+        statext[i].setAttribute("style", `
+        color: ${statextcolor.value};
+        font-size: ${statnamesize.value}px;
         `)
 
     }
