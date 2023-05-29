@@ -24,10 +24,10 @@ export let projects = {
         diff: 32
     },
     5: {
-        name: "Coming Soon",
+        name: "Pokemon Card Generator",
         image: "/main-page/content/card-generator.png",
         url: "/card-generator",
-        diff: 0
+        diff: 48
     },
     6: {
         name: "Coming Soon",
