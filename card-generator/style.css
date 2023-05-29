@@ -13,7 +13,7 @@ body {
 }
 
 #pokelogo {
-    width: 30%;
+    width: 35%;
     margin: 2%;
 }
 
@@ -27,6 +27,7 @@ header {
     width: 100%;
     display: flex;
     gap: 1%;
+    margin-top: 1%;
 }
 
 #cardsection {
@@ -54,12 +55,16 @@ header {
     border: none;
     transition: all .3s ease-in-out;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 700;
+    box-shadow: 4px 4px 1px blueviolet;
 }
 
 #pokesubmit:hover {
     background-color: blueviolet;
     color: white;
+    padding-left: 24px;
+    padding-right: 24px;
+    box-shadow: 0px 0px 0px blueviolet;
 
     border: none;
     outline: none;
