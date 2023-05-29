@@ -194,7 +194,7 @@ function copyHTML(spanList) {
     
     `
     navigator.clipboard.writeText(codeHTML)
-    console.log(codeHTML)
+    
 }
 
 
