@@ -11,7 +11,7 @@ let initialDate = convertTZ(test, country)
 updateClock()
 
 function updateClock() {
-    console.log("updating")
+    
     test = new Date()
     initialDate = convertTZ(test, country)
 
@@ -79,6 +79,6 @@ timeZoneImg.onclick = () => {
 
     updateClock()
 
-    console.log(cont)
+  
 
 }

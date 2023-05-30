@@ -33,7 +33,7 @@ export let projects = {
         name: "Digital Clock",
         image: "/main-page/content/digital-clock.png",
         url: "/digital-clock",
-        diff: 0
+        diff: 18
     },
 }
 
