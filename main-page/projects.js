@@ -30,9 +30,9 @@ export let projects = {
         diff: 48
     },
     6: {
-        name: "Coming Soon",
-        image: "/main-page/content/soon.jpg",
-        url: "/soon",
+        name: "Digital Clock",
+        image: "/main-page/content/digital-clock.png",
+        url: "/digital-clock",
         diff: 0
     },
 }
