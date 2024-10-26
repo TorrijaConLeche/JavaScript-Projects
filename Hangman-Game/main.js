@@ -131,6 +131,7 @@ function checkLetter(wordArray, userInput) {
 
             if (userWord.toString() == wordArray.toString()) { // Check if the user won the game
                 usermessage.innerHTML = text.winmsg
+                document.backgroundImage = "monicalex.jpeg"
             }
 
             userShow = userWord.join(" ") // Update value showed to the user
