@@ -129,7 +129,7 @@ function checkLetter(wordArray, userInput) {
             }
 
 
-            if (userWord.toString() == "hola") { // Check if the user won the game
+            if (userWord.toString() == wordArray.toString()) { // Check if the user won the game
                 usermessage.innerHTML = text.winmsg
                 document.body.style.backgroundColor = "red";
 
