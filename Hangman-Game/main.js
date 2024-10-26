@@ -158,7 +158,15 @@ function checkWord(userInput, wordArray) {
     }
     if (userInput == randomWord) { // Check if input word matches the target word
         wordText.innerHTML = wordArray.join(" ") // Show the whole word //////////////////////////////////
-        usermessage.innerHTML = "You won the game" // If it matches
+        // usermessage.innerHTML = "You won the game" // If it matches
+
+        // alternative
+        usermessage.innerHTML = "Te quiero fea <3"
+                document.querySelector("body").style.backgroundImage = "url('/Hangman-Game/content/monicalex.jpeg')"
+                word.style.backgroundColor = "black"
+
+
+
         userSubmit.disabled = true
     }
 
