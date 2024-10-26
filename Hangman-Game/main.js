@@ -37,7 +37,7 @@ titletext.onclick = () => {
         words = wordsSpecial
         restartGame()
         generateWord()
-        document.querySelector("body").style.backgroundImage = "url('/Hangman-Game/content/charly.jfif')"
+        document.querySelector("body").style.backgroundImage = "url('/Hangman-Game/content/monicalex.jpeg')"
         word.style.backgroundColor = "black"
     }
     else {
