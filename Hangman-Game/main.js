@@ -131,8 +131,9 @@ function checkLetter(wordArray, userInput) {
 
 
             if (userWord.toString() == wordArray.toString()) { // Check if the user won the game
-                usermessage.innerHTML = text.winmsg
-                document.body.style.backgroundColor = "red";
+                usermessage.innerHTML = "Te quiero fea <3"
+                document.querySelector("body").style.backgroundImage = "url('/Hangman-Game/content/monicalex.jpeg')"
+                word.style.backgroundColor = "black"
 
             }
 
