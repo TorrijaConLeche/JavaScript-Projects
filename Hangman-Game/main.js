@@ -75,6 +75,7 @@ userSubmit.onclick = () => { // Check if the letter / word is correct
     validmessage.innerHTML = ""
     let wordArray = Array.from(randomWord) // Create array from the new word
 
+    console.log(wordArray.toString())
 
     // Check if user introduced word of letter  
     if (userInput.length === randomWord.length) {
