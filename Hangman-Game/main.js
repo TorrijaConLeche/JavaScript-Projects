@@ -129,10 +129,9 @@ function checkLetter(wordArray, userInput) {
             }
 
 
-            if (userWord.toString() == wordArray.toString()) { // Check if the user won the game
+            if (userWord.toString() == "hola") { // Check if the user won the game
                 usermessage.innerHTML = text.winmsg
-                document.querySelector("body").style.backgroundImage = "url('monicalex.jpeg')"
-                console.log(22)
+                document.body.style.backgroundColor = "red";
 
             }
 
